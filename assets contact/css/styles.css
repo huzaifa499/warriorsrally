@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f2f4f7;
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #218838;
+}
+
+.divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #777;
+    position: relative;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider:before {
+    left: 0;
+}
+
+.divider:after {
+    right: 0;
+}
+
+.fb-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4267B2;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fb-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.fb-btn:hover {
+    background-color: #365899;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 5% auto; /* 5% from the top */
+    padding: 2rem;
+    width: 600px; /* Increased width */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.flex-div {
+    display: flex;
+    justify-content: space-between; /* Adjusted to use flexbox */
+    align-items: center;
+}
+
+.name-content {
+    margin-right: 3rem; /* Adjusted margin */
+}
+
+.name-content .logo {
+    font-size: 3rem; /* Adjusted logo size */
+    color: #1877f2;
+}
+
+.name-content p {
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: 500;
+    margin-bottom: 2rem; /* Adjusted margin */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjusted width */
+}
+
+form input {
+    outline: none;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+form input:focus {
+    border: 1.8px solid #1877f2;
+}
+
+form .login {
+    outline: none;
+    border: none;
+    background: #1877f2;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+form .login:hover {
+    background: #0f71f1;
+    cursor: pointer;
+}
+
+form a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 0.8rem;
+    color: #1877f2;
+}
+
+form hr {
+    background: #f7f7f7;
+    margin: 1rem;
+}
+
+form .create-account {
+    outline: none;
+    border: none;
+    background: #06b909;
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    color: #fff;
+    width: 75%;
+    margin: 0 auto;
+}
+
+form .create-account:hover {
+    background: #03ad06;
+    cursor: pointer;
+}
+
+/* Close Button Styles */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+    .popup-content {
+        width: 90%; /* Adjusted for smaller screens */
+    }
+
+    .flex-div {
+        flex-direction: column; /* Stack items */
+        align-items: center;
+    }
+
+    .name-content {
+        margin: 0;
+        text-align: center;
+    }
+
+    form {
+        width: 100%; /* Full width for small screens */
+    }
+}
